@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams,Link } from "react-router-dom";
+
 
 export function SearchRes(){
   let [useSearch] = useSearchParams()
@@ -16,7 +17,7 @@ export function SearchRes(){
   console.log(useSearch.get('search'))
     return(
         <div >
-            
+            <Link to="/search">Back to Search</Link>
             <h4> Searching for {useSearch.get('search').toUpperCase()} products</h4>
             <div className="d-flex flex-wrap">
             {
@@ -25,15 +26,14 @@ export function SearchRes(){
                     <div className="w-25 p-2 m-2 bg-light text-dark rounded d-flex flex-column justify-content-center align-items-center" key={item.id}>
                         
                         <p>{item.title}</p>
-                        <img src={item.image} width={70}/>
+                        <img src={item.image} width={90}/>
                     
                         <p className="bi h5 bi-currency-dollar">{item.price}</p>
-                        <button className="bi bi-cart-check-fill btn btn-warning"></button>
-                    
                         </div>
                    
             )
           }
+          
             </div>
           
         </div>

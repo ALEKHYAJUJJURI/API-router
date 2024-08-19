@@ -1,36 +1,33 @@
 import axios from "axios"
-import { useEffect,useState } from "react"
-import { useSearchParams } from "react-router-dom"
+import { useEffect, useState } from "react"
+import { Link, useSearchParams } from "react-router-dom"
 
 export function TopSearch(){
-    let [searchParams] = useSearchParams()
-    console.log([searchParams]) 
-    const[products,setProducts] = useState([])
- 
-    useEffect(()=>{
-        axios.get(`https://fakestoreapi.com/products/category/${searchParams.get('search')}`) 
-        .then(res=>{
-            console.log(res.data)
-            setProducts(res.data)
-        })
-        
-      },[])
-    console.log(searchParams.get('search'))
-
+    let [params] = useSearchParams()
+const[prod,setProd] = useState([])
+useEffect(()=>{
+    console.log(params.get('search'))
+    axios.get(`https://fakestoreapi.com/products/category/${params.get('search')}`)
+    .then(res=>{
+        console.log(res.data)
+        setProd(res.data)
+    })
+},[])
     return(
         <div>
-            <h3>Top Results</h3>
+            <h2>Top Results</h2>
        <div className="d-flex flex-wrap">
        {
-            products.filter(prod=>prod.rating.rate>4.0).map(im=>
-                <div key={im.id} className="w-50 p-3">
-                    <p>{im.title}</p>
-                    <img src={im.image} width={80}/>
-                    <p className="bi bi-currency-dollar">{im.price}</p>
-                    <p>{im.rating.rate}</p>
-                 </div>   
+            prod.filter(item=>item.rating.rate>4.0).map(detail=>
+                <div key={detail.id} className="w-25 p-4">
+                        
+                            <img src={detail.image} width={80} className="my-1"/>
+                        <p className="h6 bi bi-currency-dollar">{detail.price}</p>
+                        <p>{detail.rating.rate}</p>
+                </div>    
             )
         }
+        <Link to="/search">Back to search</Link>
        </div>
         </div>
     )
