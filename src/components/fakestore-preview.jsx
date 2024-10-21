@@ -58,4 +58,4 @@ export function HandlePreview(){
           <Link to={`/categories/products/${preview.category}`}> Back to products</Link>
         </div>
     )
-}7842121989 
+}
