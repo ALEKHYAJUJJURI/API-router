@@ -1,3 +1,11 @@
+**SHOPPING Application**
+
+![initial-page](https://github.com/ALEKHYAJUJJURI/API-router/blob/4f857d47fda45ce46df8f31d5a619ddc44aa866a/API-router-1.jpg)
+![login page](https://github.com/ALEKHYAJUJJURI/API-router/blob/4f857d47fda45ce46df8f31d5a619ddc44aa866a/API-router-2.jpg)
+![products](https://github.com/ALEKHYAJUJJURI/API-router/blob/4f857d47fda45ce46df8f31d5a619ddc44aa866a/API-router-3.jpg)
+![preview](https://github.com/ALEKHYAJUJJURI/API-router/blob/4f857d47fda45ce46df8f31d5a619ddc44aa866a/API-router-4.jpg)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
