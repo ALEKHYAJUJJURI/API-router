@@ -1,4 +1,5 @@
 **SHOPPING Application**
+
 A responsive shopping application built with React router dom, utilizing the FakeStore API to simulate an e-commerce experience. This application allows users to browse products, filter by category, and place an order.
 
 ![initial-page](https://github.com/ALEKHYAJUJJURI/API-router/blob/4f857d47fda45ce46df8f31d5a619ddc44aa866a/API-router-1.jpg)
